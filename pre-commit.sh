@@ -6,4 +6,7 @@ status=$?
 node linters/js_css_lint.js
 status=$?
 [ $status -eq 0 ] && echo '' || exit 1
+node linters/jscpd.js
+status=$?
+[ $status -eq 0 ] && echo '' || exit 1
 npx prettier --write .
